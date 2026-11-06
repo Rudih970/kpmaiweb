@@ -1,0 +1,20 @@
+Bertindaklah sebagai Database Architect. Buatlah struktur skema database relational untuk KPMA UIKA sesuai spesifikasi menu navigasi berikut:
+
+1. SKEMA TABEL (MIGRATIONS):
+   - `users`: id, name, email, password, role (enum: 'admin', 'auditor'), timestamps.
+   - `spmi_documents`: id, title, slug, cycle_category (enum: 'dokumen_spmi', 'pelaksanaan', 'evaluasi', 'pengendalian', 'peningkatan'), file_path, description, is_active (bool), timestamps.
+   - `spme_items`: id, title, slug, category (enum: 'akreditasi_nasional', 'akreditasi_internasional', 'cakupan_lam', 'instrumen_panduan'), file_path, external_link, description, timestamps.
+   - `regulations`: id, title, slug, category (enum: 'uu_pemerintah', 'statuta_yayasan', 'peraturan_rektor', 'pedoman_operasional'), file_path, year, timestamps.
+   - `information_posts`: id, title, slug, category (enum: 'pengumuman_penting', 'agenda', 'berita'), content, image_path, event_date (nullable), is_featured (bool), views (integer), timestamps.
+
+2. MODELS & RELATIONSHIPS:
+   - Buat Model: `SpmiDocument`, `SpmeItem`, `Regulation`, `InformationPost`.
+   - Tambahkan Mass Assignment Protection ($fillable) dan Casts yang sesuai pada masing-masing Model.
+   - Buat Query Scopes untuk memfilter berdasarkan kategori pada tiap model.
+
+3. SEEDERS:
+   - Buat `DatabaseSeeder` yang mencakup:
+     - User Admin default (`admin@uika-bogor.ac.id` / `password123`).
+     - Seeder data awal untuk 5 Slide Hero Banner dan sampel berita/pengumuman.
+
+Hasilkan seluruh file migration PHP, class Model Eloquent, dan Seeder secara lengkap.

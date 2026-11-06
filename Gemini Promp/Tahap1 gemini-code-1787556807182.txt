@@ -1,0 +1,22 @@
+Bertindaklah sebagai Senior Full-Stack Web Developer. Tolong persiapkan fondasi proyek Laravel 11 untuk website KPMA UIKA pada environment XAMPP dan Antigravity IDE dengan instruksi detail berikut:
+
+1. KONFIGURASI PROYEK:
+   - Buat proyek baru Laravel 11 dengan nama `kpma-uika-app`.
+   - Konfigurasi file `.env` untuk koneksi MySQL XAMPP:
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=db_kpma_uika
+     DB_USERNAME=root
+     DB_PASSWORD=
+
+2. INSTALASI DEPENDENSI:
+   - Install paket autentikasi `laravel/breeze` dengan opsi Blade + Tailwind CSS.
+   - Install `spatie/laravel-permission` untuk manajemen role (Admin, Auditor, User).
+   - Jalankan perintah `php artisan storage:link` untuk akses publik file unggahan.
+
+3. STRUKTUR ASET & COMPILER:
+   - Pastikan Vite terkonfigurasi dengan Tailwind CSS, Alpine.js, dan FontAwesome 6 (via CDN di layouts).
+   - Buat file layout utama Blade: `resources/views/layouts/frontend.blade.php` dan `resources/views/layouts/backend.blade.php`.
+
+Tolong hasilkan langkah terminal/command line beserta kode file `.env` dan `vite.config.js` secara lengkap.

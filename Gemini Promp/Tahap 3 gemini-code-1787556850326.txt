@@ -1,0 +1,21 @@
+Bertindaklah sebagai Frontend Engineer. Konversikan desain UI HTML/CSS `kpma-uika.html` menjadi komponen Blade dinamis yang terhubung dengan database Laravel.
+
+1. STRUKTUR TEMPLATE BLADE:
+   - `resources/views/components/navbar.blade.php`:
+     - Dropdown SPMI: Dokumen SPMI, Pelaksanaan Standar, Evaluasi Pelaksanaan, Pengendalian Standar, Peningkatan Standar.
+     - Dropdown SPME: Akreditasi Nasional, Akreditasi Internasional, Cakupan LAM, Instrumen dan Panduan.
+     - Dropdown Peraturan: Peraturan Pemerintah/UU, Statuta & Peraturan Yayasan, Peraturan Rektor, Pedoman Operasional.
+     - Dropdown Informasi: Pengumuman Penting, Agenda, Berita.
+     - Tombol Navigasi Kanan: "APPS KPMA" (mengarahkan ke `/login` atau `/dashboard`).
+   - `resources/views/components/hero-slider.blade.php`:
+     - Implementasikan Swiper.js/Alpine.js untuk 5 Slide Banner Interaktif lengkap dengan teks overlay dan tombol navigasi.
+   - `resources/views/components/footer.blade.php`.
+
+2. CONTROLLER & ROUTES PUBLIK (`routes/web.php`):
+   - `HomeController@index`: Menampilkan Hero Slider, 3 Pengumuman Penting Terbaru, Agenda Mendatang, dan Berita Terkini.
+   - `SpmiController@showByCategory($category)`: Menampilkan daftar PDF/dokumen SPMI.
+   - `SpmeController@showByCategory($category)`: Menampilkan data Akreditasi & Panduan.
+   - `RegulationController@index`: Menampilkan tabel/list peraturan yang bisa diunduh.
+   - `InformationController@index` & `show($slug)`: Halaman daftar berita/agenda serta halaman detail artikel.
+
+Berikan kode lengkap untuk `routes/web.php`, `HomeController.php`, dan komponen Blade `navbar.blade.php` serta `index.blade.php`.

@@ -1,0 +1,18 @@
+Bertindaklah sebagai Backend Developer. Buatlah Sistem Manajerial/CMS internal "APPS KPMA" yang diproteksi oleh Autentikasi Laravel Breeze (`middleware(['auth'])`).
+
+1. FITUR DASHBOARD ADMIN (`/admin/dashboard`):
+   - Ringkasan Statistik: Total Dokumen SPMI, Total Data SPME, Jumlah Peraturan, Total Posting Informasi.
+   - Log Aktivitas Singkat / Modul Akses Cepat.
+
+2. MODUL MANAGEMENT CRUD:
+   - **Modul SPMI Manager**: Form upload file PDF dokumen SPMI, dropdown kategori PPEPP, edit, dan hapus file.
+   - **Modul SPME Manager**: Management link external & upload instrumen akreditasi.
+   - **Modul Peraturan Manager**: Pengelolaan arsip dokumen hukum dan peraturan rektor.
+   - **Modul Informasi Manager**: Rich Text Editor (using CKEditor/Trix) untuk membuat Berita, Pengumuman, dan Agenda lengkap dengan upload Gambar Hero Artikel.
+
+3. VALIDASI & FILE STORAGE:
+   - Gunakan `FormRequest` Class untuk validasi input (misal: `StoreInformationRequest`, `StoreSpmiRequest`).
+   - Validasi file PDF max 10MB, Validasi Gambar (JPG, PNG, WEBP) max 2MB.
+   - Simpan berkas secara terstruktur di storage lokal (`storage/app/public/documents/...` dan `storage/app/public/posts/...`).
+
+Tuliskan kode lengkap untuk `AdminDashboardController.php`, `SpmiDocumentController.php` (CRUD Backend), `StoreSpmiRequest.php`, serta view Blade `admin/spmi/index.blade.php` dan `admin/spmi/create.blade.php`.

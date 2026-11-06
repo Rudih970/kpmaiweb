@@ -1,0 +1,20 @@
+Bertindaklah sebagai DevOps & QA Engineer. Berikan panduan dan skrip lengkap untuk tahap akhir verifikasi, proteksi keamanan, serta optimasi performa pada lingkungan server lokal XAMPP.
+
+1. KEAMANAN & VALIDASI:
+   - Pastikan proteksi CSRF (`@csrf`) aktif pada setiap form frontend dan backend.
+   - Terapkan Sanitasi Input HTML pada detail artikel Berita untuk mencegah vulnerability XSS.
+   - Konfigurasi HTTP Security Headers via Middleware (`SecurityHeadersMiddleware`).
+
+2. OPTIMASI PERFORMA LARAVEL:
+   - Berikan daftar perintah optimasi produksi:
+     `php artisan config:cache`
+     `php artisan route:cache`
+     `php artisan view:cache`
+     `php artisan optimize`
+
+3. PANDUAN DEPLOYMENT KE XAMPP (Apache VirtualHost):
+   - Konfigurasi `httpd-vhosts.conf` Apache XAMPP agar domain lokal `http://kpma.uika.test` mengarah ke folder `/public` proyek Laravel.
+   - Konfigurasi file `.htaccess` utama di folder `public` untuk mempercepat pemuatan aset gambar dan file PDF.
+   - Langkah-langkah pengujian otomatis (PHPUnit / Pest Test) untuk memastikan seluruh rute menu navigasi utama (SPMI, SPME, Peraturan, Informasi, APPS KPMA) merespons status `200 OK`.
+
+Sediakan file konfigurasi Apache VirtualHost, Middleware Keamanan, dan instruksi pengujian (testing checklist) secara detail.
